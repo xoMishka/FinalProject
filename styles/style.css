@@ -103,10 +103,21 @@ body {
     padding: 1rem 3rem;
     font-size: 1.5rem;
     color: #733030;
+    transition: font-size 0.3s ease-out;
 }
 
 .navbar a:hover {
     color: #5F734C;
+    font-size: 2rem;
+}
+
+.navbar a::before {
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::before {
+    transform: scaleX(1);
 }
 
 .navbar a:last-of-type {
@@ -154,17 +165,17 @@ body {
     text-align: justify;
 }
 
-#creator small {
+small {
     display: block;
     text-align: end;
     margin-right: 4rem;
 }
 
-#creator small > a {
+small > a {
     color: #733030;
 }
 
-#creator small > a:hover {
+small > a:hover {
     color: #5F734C;
 }
 /* Books */
@@ -188,17 +199,19 @@ m6 { grid-area: m6; }
 
 .movie-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-        ". m1 . m2 ."
-        ". m3 . m4 ."
-        ". m5 . m6 .";
+        "m1 m2"
+        "m3 m4"
+        "m5 m6";
     gap: 1rem;
+    text-align: center;
 }
 
 #movies p {
     text-align: center;
+    margin: 4rem;
 }
 
 #movies img {
