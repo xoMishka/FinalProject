@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <header>
@@ -24,16 +25,18 @@
             </ul>
         </nav>
         <div id="banner">
-            <h1>Lord of the Rings</h1>
+            <h1 class="animate__bounceIn">Lord of the Rings</h1>
 
             <div class="wrapper">
                 <p>My top buttons use transition to reveal an up arrow when you mouse
                     over them.<br><br>
                 The nav bar transforms into a larger font size on hover.<br><br>
                 The last top button transitions to a different color on hover.<br><br>
-                ANIMATE<br><br>
-                CODE LIBRARY
+                My bottom button below uses animate to change the background color on hover.<br><br>
+                My banner header uses the bounce in class from Animate.css!
                 </p>
+
+                <button class="bottom"><span><a href="#bottom">Bottom</a></span></button>
                 <img src="images/hobbiton.jpg" alt="hobbiton">
             </div>
         </div>
@@ -88,7 +91,7 @@
 
             <small><a href="https://www.imdb.com/name/nm0866058/bio?ref_=nm_ov_bio_sm">IMDB</a> Mini Biography by: Sujit R. Varma</small>
 
-            <button><span><a href="#top">Top</a></span></button>
+            <button id="top"><span><a href="#top">Top</a></span></button>
         </div>
 
         <div id="books">
@@ -101,7 +104,7 @@
                 <img src="images/3rd.jpg" alt="return">
             </div>
 
-            <button><span><a href="#top">Top</a></span></button>
+            <button id="top"><span><a href="#top">Top</a></span></button>
         </div>
 
         <div id="movies">
@@ -166,12 +169,13 @@
                 </div>
             </div>
             
-            <button><span><a href="#top">Top</a></span></button>
+            <button id="top"><span><a href="#top">Top</a></span></button>
         </div>
     </main>
 
     <footer>
         <p>&copy; Amber Jeffers 2021</p>
+        <a id="bottom"></a>
     </footer>
 </body>
 </html>
